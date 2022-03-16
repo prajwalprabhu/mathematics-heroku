@@ -6,10 +6,8 @@ import swaggerUi from "swagger-ui-express";
 import YAML from "yamljs";
 const swaggerDocument = YAML.load("./swagger.yaml");
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.get("/", (req, res) => {
-  res.send("Welcome");
-});
+app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.get("/add/:num1/:num2", (req, res, next) => {
   let num1 = parseFloat(req.params.num1);
   let num2 = parseFloat(req.params.num2);
