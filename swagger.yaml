@@ -1,0 +1,104 @@
+openapi: 3.0.0
+info:
+  title: Mathematics
+  description: Api for some mathematics functions.
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+  
+paths:
+  /add/{num1}/{num2}:
+    get:
+      summary: Returns the sum of numbers u gave
+      parameters: 
+        - name: num1
+          in: path
+          required: true
+          description: First Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+        - name: num2
+          in: path
+          required: true
+          description: Second Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+      responses:
+        '200':
+          description: OK
+  /sub/{num1}/{num2}:
+    get:
+      summary: Returns the difference of numbers u gave
+      parameters: 
+        - name: num1
+          in: path
+          required: true
+          description: First Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+        - name: num2
+          in: path
+          required: true
+          description: Second Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+      responses:
+        '200':
+          description: OK
+  /multiply/{num1}/{num2}:
+    get:
+      summary: Returns the multiplication of numbers u gave
+      parameters: 
+        - name: num1
+          in: path
+          required: true
+          description: First Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+        - name: num2
+          in: path
+          required: true
+          description: Second Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+      responses:
+        '200':
+          description: OK
+  /divide/{num1}/{num2}:
+    get:
+      summary: Returns the quotient of numbers u gave
+      parameters: 
+        - name: num1
+          in: path
+          required: true
+          description: First Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+        - name: num2
+          in: path
+          required: true
+          description: Second Number
+          schema:
+            type: integer
+            format: int64
+            default: 2
+      responses:
+        '200':
+          description: OK
+              
+
+
