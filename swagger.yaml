@@ -4,6 +4,7 @@ info:
   description: Api for some mathematics functions.
   version: 1.0.0
 servers:
+  - url: https://prajwalprabhu-mathematics.herokuapp.com/
   - url: http://localhost:4000
   
 paths:
